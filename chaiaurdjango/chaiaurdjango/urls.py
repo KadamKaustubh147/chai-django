@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views 
 
 urlpatterns = [
@@ -23,8 +23,8 @@ urlpatterns = [
     path('', views.home, name="home"),
     path("about/", views.about, name="about"),
     path("contact/", views.contact, name="contact"),
-    path("chai/", include("chai.urls")),
+    path("chai/", include("chai.urls")), # chai naam ka app hai usme urls
     # ye settings.py se pata chalega chai app ke baare mei
-    # abhi ye include karke control transfer kardiya hai
-    # transfer from main app to this app control urls.py ka
+    # abhi ye include keyword use karke control transfer kardiya hai
+    # transfer control from main app to this app control urls.py ka
 ]

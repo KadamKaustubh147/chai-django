@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All chai</title>
-</head>
-<body>
-   <h1>All types of chai available.</h1> 
-</body>
-</html>
+{% extends "layout.html" %}
+{% comment %} Pehle app ke layout.html mei jaega fir root ke isme jaega 
+
+accha par ye sab kaise ho rha kyuki settings.py mei voh wala folder mentioned hai
+
+{% endcomment %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <h1>All chai for you</h1>
+{% endblock %}
