@@ -27,4 +27,6 @@ urlpatterns = [
     # ye settings.py se pata chalega chai app ke baare mei
     # abhi ye include keyword use karke control transfer kardiya hai
     # transfer control from main app to this app control urls.py ka
+
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
